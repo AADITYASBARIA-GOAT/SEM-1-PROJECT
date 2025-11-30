@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITNESS CLOTHING WEBSITE</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: #ffffff;
+            color: #111;
+        }
+        nav{
+            width: 100%;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(255, 255, 255,0.95);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+        }
+        .logo-container{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo-img{
+            width: 50px;
+        }
+        .logo-text{
+            font-size: 26px;
+            font-weight: 900;
+        }
+        nav ul{
+            list-style: none;
+            color: #111;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav ul li a{
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+        nav ul li a:hover{
+            color: #ff3c00;
+        }
+        .hero {
+      margin-top: 120px;
+      width: 100%;
+      padding: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #f5f5f5;
+    }
+
+    .hero-text {
+      max-width: 50%;
+    }
+
+    .hero-text h1 {
+      font-size: 60px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero-text p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      animation: fadeInUp 1.3s ease;
+    }
+
+    .hero img {
+      width: 45%;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Product Cards */
+    .products {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .products h2 {
+      font-size: 40px;
+      margin-bottom: 40px;
+      font-weight: 900;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .card button {
+      padding: 10px 20px;
+      border: none;
+      background: #111;
+      color: #fff;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .card button:hover {
+      background: #ff3c00;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111;
+      color: #fff;
+      margin-top: 50px;
+      font-size: 14px;
+    }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav>
+    <div class="logo-container">
+      <img src="nike-4-logo-png-transparent.png" class="logo-img" />
+      <span class="logo-text">NIKE</span>
+    </div>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Step Into Greatness</h1>
+      <p>Discover the latest Nike shoes built for performance and style.</p>
+      <button style="padding: 15px 30px; background:#111; color:#fff; border:none; font-size:18px; border-radius:8px; cursor:pointer;">Shop Now</button>
+    </div>
+    <img src="hero.jpg" alt="Hero Shoe" />
+  </section>
+
+  <!-- Products Section -->
+  <section class="products" id="products">
+    <h2>Featured Products</h2>
+
+    <div class="product-grid">
+
+      <div class="card">
+        <img src="shoes1.jpg" alt="Product 1" />
+        <h3>Nike Air Zoom</h3>
+        <p>Lightweight speed and ultimate comfort.</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="shoes 2.png" alt="Product 2" />
+        <h3>Nike Pegasus</h3>
+        <p>Perfect for running and everyday wear.</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="shoes3.png" alt="Product 3" />
+        <h3>Nike Revolution</h3>
+        <p>Style meets performance in every step.</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="card">
+        <img src="clothes1.avif" alt="Product 3" />
+        <h3>Nike fome</h3>
+        <p>Style meets comfort in every step.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="clothes2.avif" alt="Product 3" />
+        <h3>Nike tech</h3>
+        <p>Move in a light way.</p>
+        <button>Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="clothes3.avif" alt="Product 3" />
+        <h3>Nike X Stussy</h3>
+        <p>Empowered by everyone.</p>
+        <button>Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+</main>
+  <!-- Footer -->
+  <footer>
+    © 2025 Nike Demo Store — For educational and demo purposes only.
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
